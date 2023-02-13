@@ -1,0 +1,25 @@
+<p>Listado de Heroes</p>
+
+<div>
+    <ul>
+        <li *ngFor="let game of games let i = index"> {{i + 1}} {{ game }}</li>
+    </ul>
+</div>
+
+<div *ngIf="name; else noBorrado">
+    <h3>
+        <span>Eliminado es: <small>{{name}}</small></span>
+    </h3>
+</div>
+ 
+<div>   
+    <ng-template #noBorrado>
+        <h3>
+            <span>Nada ha borrado nada</span>
+        </h3>
+    </ng-template>
+</div>
+
+<div>
+    <button (click)="deleteGame()"> Borrar </button>
+</div>
