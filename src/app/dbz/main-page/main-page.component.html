@@ -1,0 +1,20 @@
+
+<h1>Dragon Ball Z</h1>
+<hr>
+<div class="row">
+    <div class="col">
+        
+        <h3>Personajes</h3>
+        <hr>
+
+        <div class=" col">
+            <app-characters-list [data]="characters">
+            </app-characters-list>
+        </div>
+    </div>
+
+    <div class="col">
+        <app-add-character [new]="new" [characters]="characters" >
+        </app-add-character>
+    </div>
+</div>
